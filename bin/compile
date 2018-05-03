@@ -35,6 +35,8 @@ mkdir -p $CACHE_DIR/$ARCHIVE_NAME
 mkdir -p $BUILD_DIR/vendor/
 tar xzf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR/$ARCHIVE_NAME
 mv ${CACHE_DIR}/${ARCHIVE_NAME}/opt/libreoffice${MINOR_VERSION} $BUILD_DIR/vendor/libreoffice
+
+echo "-----> LibreOffice: Removing unneeded LibreOffice ${VERSION} fonts from ${BUILD_DIR}/vendor/libreoffice/share/fonts/truetype/"
 rm -rf $BUILD_DIR/vendor/libreoffice/share/fonts/truetype/LinBiolinum*
 rm -rf $BUILD_DIR/vendor/libreoffice/share/fonts/truetype/LinLibertine*
 
